@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     # Project Apps
     'comments',
+
+    # Third part Apps
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
