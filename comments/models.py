@@ -6,11 +6,12 @@ from django.db import models
 class Comment(models.Model):
 
     email = models.EmailField()
+    name = models.CharField(max_length=32)
     comment = models.TextField()
-    article_hash = models.CharField(max_length=64)
+    link = models.URLField()
     visible = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField()
+    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = "Comment"
