@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="nocommentApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <script src="{% static "/js/angular.js" %}"></script>
     <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
@@ -46,6 +47,12 @@
             <h2>Heading</h2>
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
             <h3>Comments</h3>
+              <div ng-controller="nocommentController as comment">
+                {$ comment.name $} - {$ comment.email $}
+                <br>
+                {$ comment.comment $}
+
+              </div>
 
           </div><!-- /.blog-post -->
 
@@ -68,5 +75,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="{% static "/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "/js/nocomment.app.js" %}"></script>
+    <script src="{% static "/js/nocomment.controller.js" %}"></script>
   </body>
 </html>
