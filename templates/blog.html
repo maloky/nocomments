@@ -47,10 +47,36 @@
             <h2>Heading</h2>
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
             <h3>Comments</h3>
-              <div ng-controller="nocommentController as comment">
-                {$ comment.name $} - {$ comment.email $}
+              <div ng-controller="nocommentController as comments">
+
+                <form ng-submit="comments.addComment();">
+
+                  <input type="text"
+                         placeholder="Write comment here..."
+                         ng-model="comments.comment">
+
+                  <input type="text"
+                         placeholder="Name"
+                         ng-model="comments.name">
+
+                  <input type="email"
+                         placeholder="Email"
+                         ng-model="comments.email">
+
+                  <button type="submit">
+                    send comment!
+                  </button>
+                </form>
+
+                <ul
+                  <li ng-repeat="comment in comments.list">
+                    <h6>{$ comment.name $}</h6>
+                    <p>
+                      {$ comment.comment $}
+                    </p>
+                  </li>
+                </ul>
                 <br>
-                {$ comment.comment $}
 
               </div>
 
@@ -77,5 +103,6 @@
     <script src="{% static "/js/bootstrap.min.js" %}"></script>
     <script src="{% static "/js/nocomment.app.js" %}"></script>
     <script src="{% static "/js/nocomment.controller.js" %}"></script>
+    <script src="{% static "/js/nocomment.service.js" %}"></script>
   </body>
 </html>
