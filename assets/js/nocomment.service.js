@@ -6,13 +6,24 @@ function nocommentService($http) {
             .get(API)
             .then(function (response) {
                 return response.data;
-             }, function (error) {
+                }, function (error) {
+                // deal with error
+            });
+    }
+
+    function addComment(newComment) {
+        return $http
+            .post(API, newComment)
+            .then(function (response) {
+                return response.data;
+                }, function (error) {
                 // deal with error
             });
     }
 
     return {
-        getComments: getComments
+        getComments: getComments,
+        addComment: addComment
     };
 };
 
