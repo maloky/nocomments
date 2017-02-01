@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <script src="{% static "/js/angular.js" %}"></script>
-    <title>The amaze wire</title>
+    <title>No Comments</title>
 
     <!-- Bootstrap core CSS -->
     <!-- Latest compiled and minified CSS -->
@@ -26,7 +26,7 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">The amaze wire</h1>
+        <h1 class="blog-title">No Comments</h1>
         <p class="lead blog-description">A modest comment project with high hopes.</p>
       </div>
 
@@ -52,12 +52,12 @@
 
             <div class="row" ng-controller="nocommentController as comments">
                 <div class="col-sm-12">
-                  <p>Leave a comment</p>
+                  <p>Deixe um comentário</p>
                 </div>
                 <form ng-submit="comments.addComment();">
                   <div class="form-group col-sm-12">
                     <textarea type="text"
-                            placeholder="Write comment here..."
+                            placeholder="Escreva um comentário..."
                             class="form-control"
                             ng-model="comments.comment">
                     </textarea>
@@ -65,8 +65,8 @@
                   <div class="form-group form-inline col-sm-12">
                     <input
                         type="text"
-                        placeholder="Name"
-                        name="Name"
+                        placeholder="Nome"
+                        name="name"
                         required=""
                         class="form-control"
                         ng-model="comments.name">
@@ -78,14 +78,14 @@
                         required=""
                         ng-model="comments.email">
                     <button type="submit" class="btn btn-info pull-right">
-                      send comment!
+                      Enviar comentário
                     </button>
                   </div>
                 </form>
 
                 <div class="col-sm-12">
 
-                <h3>Comments</h3>
+                <h3>Comentários</h3>
                 <div class="row" ng-repeat="comment in comments.list">
                   <div class="col-sm-1">
                     <div class="thumbnail">
@@ -107,7 +107,6 @@
                       </div><!-- /.panel-body -->
                     </div><!-- /.panel panel-default -->
                   </div><!-- /.col-sm-10 -->
-
                 </div><!-- /.row -->
               </div><!-- /.col-sm-12 -->
             </div><!-- end of cotroller div -->

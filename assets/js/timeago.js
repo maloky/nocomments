@@ -8,18 +8,18 @@ function timeAgo(selector) {
 
     var templates = {
         prefix: "",
-        suffix: " ago",
-        seconds: "less than a minute",
-        minute: "about a minute",
-        minutes: "%d minutes",
-        hour: "about an hour",
-        hours: "about %d hours",
-        day: "a day",
-        days: "%d days",
-        month: "about a month",
-        months: "%d months",
-        year: "about a year",
-        years: "%d years"
+        suffix: " atrás",
+        seconds: "à menos de um minuto",
+        minute: "acerca de 1 minuto",
+        minutes: "%d minutos",
+        hour: "acerca de 1 hora",
+        hours: "acerca de %d horas",
+        day: "à 1 dia",
+        days: "à %d dias",
+        month: "acerca de 1 mês",
+        months: "à %d meses",
+        year: "acerca de 1 ano",
+        years: "à %d anos"
     };
     var template = function(t, n) {
         return templates[t] && templates[t].replace(/%d/i, Math.abs(Math.round(n)));
