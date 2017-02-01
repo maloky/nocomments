@@ -10,7 +10,6 @@ function nocommentController(nocommentService) {
       nocommentService
         .getComments()
         .then( function (response ){
-            debugger;
             ctrl.list = response;
         })
     };
