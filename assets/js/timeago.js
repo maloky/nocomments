@@ -1,4 +1,4 @@
-(function timeAgo(selector) {
+function timeAgo(selector) {
 
     var templates = {
         prefix: "",
@@ -60,4 +60,4 @@
     // update time every minute
     setTimeout(timeAgo, 60000);
 
-})();
+};

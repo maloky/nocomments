@@ -119,5 +119,10 @@
     <script src="{% static '/js/nocomment.service.js' %}"></script>
 
     <script src="{% static '/js/timeago.js' %}"></script>
+    <script>
+      $(document).ready(function() {
+        setTimeout(timeAgo, 100);
+      });
+    </script>
   </body>
 </html>
