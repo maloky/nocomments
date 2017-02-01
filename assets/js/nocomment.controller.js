@@ -7,15 +7,6 @@ function nocommentController(nocommentService) {
     ctrl.link = 'http://127.0.0.1:8000';
     ctrl.list = [];
 
-    function getAllComments() {
-      nocommentService
-        .getComments()
-        .then( function (response ){
-            ctrl.list = response;
-        })
-    };
-
-
     ctrl.addComment = function() {
       if (!ctrl.comment) {
             return;
@@ -29,11 +20,22 @@ function nocommentController(nocommentService) {
             link: ctrl.link})
         .then( function (response ){
           ctrl.list.push(response);
-          ctrl.name = '';
-          ctrl.email = '';
-          ctrl.comment = '';
-
+          clearForm();
         });
+    };
+
+    function getAllComments() {
+      nocommentService
+        .getComments()
+        .then( function (response ){
+            ctrl.list = response;
+        })
+    };
+
+    function clearForm() {
+      ctrl.name = '';
+      ctrl.email = '';
+      ctrl.comment = '';
     };
 
     getAllComments();
