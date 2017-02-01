@@ -1,3 +1,9 @@
+/*
+* Script from goker
+* https://coderwall.com/p/uub3pw/javascript-timeago-func-e-g-8-hours-ago
+*
+*/
+
 function timeAgo(selector) {
 
     var templates = {
