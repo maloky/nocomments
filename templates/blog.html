@@ -51,17 +51,20 @@
 
                 <form ng-submit="comments.addComment();">
 
-                  <input type="text"
-                         placeholder="Write comment here..."
-                         ng-model="comments.comment">
+                  <textarea type="text"
+                            placeholder="Write comment here..."
+                            ng-model="comments.comment">
+                  </textarea>
 
                   <input type="text"
                          placeholder="Name"
                          ng-model="comments.name">
+                  </input>
 
                   <input type="email"
                          placeholder="Email"
                          ng-model="comments.email">
+                  </input>
 
                   <button type="submit">
                     send comment!
