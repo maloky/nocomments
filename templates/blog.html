@@ -98,12 +98,16 @@
                       <div class="panel-heading">
                         <strong>{$ comment.name $}</strong>
                         <time class="timeago text-muted" datetime="{$ comment.created $}"></time>
+                        <span
+                            class="text-danger"
+                            ng-show="{$ !comment.visible $}"><small>Aguardar Aprovação</small></span>
                       </div>
                       <div class="panel-body">
                         {$ comment.comment $}
                       </div><!-- /.panel-body -->
                     </div><!-- /.panel panel-default -->
-                  </div><!-- /.col-sm-5 -->
+                  </div><!-- /.col-sm-10 -->
+
                 </div><!-- /.row -->
               </div><!-- /.col-sm-12 -->
             </div><!-- end of cotroller div -->
