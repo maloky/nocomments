@@ -18,7 +18,7 @@ function nocommentController(nocommentService) {
 
     ctrl.addComment = function() {
       if (!ctrl.comment) {
-            return
+            return;
       }
 
       nocommentService
@@ -29,6 +29,10 @@ function nocommentController(nocommentService) {
             link: ctrl.link})
         .then( function (response ){
           ctrl.list.push(response);
+          ctrl.name = '';
+          ctrl.email = '';
+          ctrl.comment = '';
+
         });
     };
 
