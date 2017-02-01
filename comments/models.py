@@ -3,6 +3,11 @@ from __future__ import unicode_literals
 from django.db import models
 
 
+class CommentQuerySet(models.QuerySet):
+    def approved(self):
+        return self.filter(visible=True)
+
+
 class Comment(models.Model):
 
     email = models.EmailField()
@@ -12,6 +17,8 @@ class Comment(models.Model):
     visible = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    objects = CommentQuerySet.as_manager()
 
     class Meta:
         verbose_name = "Comment"

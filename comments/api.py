@@ -7,4 +7,4 @@ from .models import Comment
 class CommentsViewSet(viewsets.ModelViewSet):
 
     serializer_class = CommentSerializer
-    queryset = Comment.objects.all()
+    queryset = Comment.objects.approved()
