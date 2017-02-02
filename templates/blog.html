@@ -55,6 +55,7 @@
                   <p>Deixe um comentário</p>
                 </div>
                 <form ng-submit="comments.addComment();">
+                  {% csrf_token %}
                   <div class="form-group col-sm-12">
                     <textarea type="text"
                             placeholder="Escreva um comentário..."
