@@ -1,1 +1,1 @@
-web: gunicorn nocomments.wsgi
+web: gunicorn nocomment.wsgi
