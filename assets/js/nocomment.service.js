@@ -1,5 +1,5 @@
 function nocommentService($http) {
-    var API = "http://127.0.0.1:8000/api/comments/";
+    var API = "https://nocomments.herokuapp.com/api/comments/";
 
     function getComments() {
         return $http
